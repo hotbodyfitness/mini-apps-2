@@ -1,0 +1,27 @@
+h1 {
+  text-align: center;
+}
+
+select {
+  zoom: 150%;
+}
+
+.chart {
+  padding-bottom: 50px;
+}
+
+.select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#selectTitle {
+  font-size: 20px;
+}
+
+#myChart {
+  width: 400px;
+  height: 400px;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "challenge_2",
+  "version": "1.1.0",
+  "description": "Mini Apps 2 Challenge 2 - Cryptocurrency Charting Tool",
+  "author": "Zack K. Miller",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "scripts": {
+    "start": "nodemon server.js",
+    "build": "webpack -d --watch"
+  },
+  "dependencies": {
+    "babel-loader": "^8.0.6",
+    "body-parser": "^1.19.0",
+    "chart.js": "^2.9.3",
+    "coingecko-api": "^1.0.6",
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "request": "^2.88.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0"
+  }
+}
