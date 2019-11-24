@@ -6,18 +6,26 @@ select {
   zoom: 150%;
 }
 
+.top {
+  margin-top: -10px;
+}
+
 .chart {
   padding-bottom: 50px;
+  max-height: 750px;
 }
 
 .select {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
-#selectTitle {
+.lowHigh {
+  margin-top: -50px;
+}
+
+.selectTitle {
   font-size: 20px;
 }
 

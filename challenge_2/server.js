@@ -49,7 +49,7 @@ app.get('/data', (req, res) => {
   if (cache[q]) {
     res.send(cache[q[0] + q[1]])
   } else {
-    func().then(result => { cache[q[0] + q[1]] = result.data.prices; cache.size++; res.send(result.data.prices) });
+    func().then(result => { cache[q[0] + q[1]] = result.data.prices; cache.size++; res.send(result.data.prices); });
   }
   // func().then(result => res.send(result.data.market_data.current_price.usd));
   // func().then(result => res.send(result.data));
