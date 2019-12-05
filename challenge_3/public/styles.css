@@ -1,0 +1,212 @@
+* {
+  outline: none;
+}
+
+h1 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.x {
+  width: 0;
+  height: 0;
+  border-bottom: 20px solid transparent;
+  border-right: 29px solid transparent;
+  border-top: 30px solid black;
+  position: absolute;
+  left: 90px;
+  top: 101px;
+}
+
+.hollow {
+  position: relative;
+  top: -30px;
+  width: 0;
+  height: 0;
+  border-bottom: 15px solid transparent;
+  border-right: 27px solid transparent;
+  border-top: 28px solid white;
+}
+
+#gridTop {
+  justify-content: center;
+  display: grid;
+  grid-template-rows: 20px;
+  grid-template-columns: repeat(9, 60px) 90px;
+  grid-gap: 2px;
+  justify-items: center;
+}
+
+#gridMid {
+  justify-content: center;
+  display: grid;
+  grid-template-rows: 20px;
+  grid-template-columns: repeat(21, 29px);
+  grid-gap: 2px;
+  justify-items: center;
+  position: relative;
+  padding-top: 8px;
+}
+
+#gridBott {
+  justify-content: center;
+  display: grid;
+  grid-template-rows: 20px;
+  grid-template-columns: repeat(9, 60px) 90px;
+  grid-gap: 2px;
+  justify-items: center;
+  position: relative;
+  padding-top: 10px;
+}
+
+#grid {
+  position: absolute; /* these 4 lines center it L <-> R */
+  margin: auto;
+	left: 0;
+	right: 0;
+  display: grid;
+  grid-template-rows: 60px;
+  grid-template-columns: repeat(9, 60px) 90px;
+  width: 648px;
+  grid-gap: 2px;
+  background: black;
+  border: 2px solid black;
+}
+
+#grid div {
+  background: white;
+  color: black;
+}
+
+.smallSquare {
+  display: inline-block;
+  position: relative;
+  left: 30px;
+  height: 29px;
+  width: 29px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.lastSquares {
+  display: inline-block;
+  position: relative;
+  height: 29px;
+  width: 29.33px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.ex {
+  border-left: none;
+}
+
+/* #gridPins {
+  display: grid;
+  grid-template-rows: 60px;
+  grid-template-columns: repeat(11, 54px);
+  grid-gap: 2.5px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin: auto;
+  top: 10px;
+  left: 0;
+  right: 0;
+  width: 630px;
+  position: relative;
+} */
+
+.gridPins {
+  display: grid;
+  grid-template-rows: 50px;
+  grid-gap: 2.5px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin: auto;
+  top: 10px;
+  left: 0;
+  right: 0;
+  width: 630px;
+  position: relative;
+}
+
+#gridPins {
+  grid-template-columns: repeat(1, 54px);
+}
+#gridPins1 {
+  grid-template-columns: repeat(4, 54px);
+}
+#gridPins2 {
+  grid-template-columns: repeat(3, 54px);
+}
+#gridPins3 {
+  grid-template-columns: repeat(2, 54px);
+}
+#gridPins4 {
+  grid-template-columns: repeat(1, 54px);
+}
+
+h4 {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.gridPins button {
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 12px 18px;
+  background: lightgreen;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.gridPins #b10 {
+  padding: 12px 14px;
+}
+.gridPins #b0 {
+  background: orange;
+}
+button:hover {
+  cursor: pointer;
+}
+
+#reset {
+  position: relative;
+  top: 20px;
+  left: 17px;
+  width: 100px;
+  height: 27px;
+  font-size: 15px;
+  color: rgb(29, 29, 29);
+  border-radius: 4%;
+  border: 1px solid darkgrey;
+}
+
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#flex {
+  display: flex;
+  position: relative;
+  top: 40px;
+  justify-content: center;
+}
+
+#frame {
+  text-align: center;
+  position: relative;
+  top: -30px;
+  padding-bottom: 15px;
+  font-size: 60px;
+  border-radius: 50%;
+  border: 3px solid black;
+  background: yellow;
+  width: 70px;
+  height: 54px;
+  align-items: center;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
