@@ -1,0 +1,160 @@
+* {
+  outline: none;
+}
+h1 {
+  text-align: center;
+}
+
+#smile {
+  zoom: 300%;
+  padding: 1px 2.8px;
+  margin: 0 auto 10px;
+  display: block;
+  position: relative;
+  background: rgb(198, 198, 198);
+  border: 1px solid green;
+  /* text-align: center; */
+}
+#smile:active {
+  background: red;
+}
+
+#mainGrid {
+  display: grid;
+  grid-template-columns: repeat(10, 42px);
+  grid-template-rows: repeat(10, 42px);
+  width: 420px;
+  align-items: center;
+  justify-items: center;
+  /* justify-content: center; */
+  padding: 0;
+  margin: 0;
+  border: 1px solid black;
+  background: black;
+  /* position: relative; */
+  margin: auto;
+  right: 0;
+  left: 0;
+}
+#mainGrid div {
+  background: rgb(235, 235, 235);
+  width: 40px;
+  height: 40px;
+}
+#mainGrid button {
+  width: 40px;
+  height: 40px;
+  background: rgb(198, 198, 198);
+}
+#mainGrid button:active {
+  background: grey;
+}
+
+#mainGrid .bomb {
+  background: red;
+}
+#mainGrid .bomb div {
+  border-radius: 50%;
+  background: black;
+  width: 24px;
+  height: 24px;
+  margin: 8px 0 0 8px;
+  position: relative;
+  bottom: 42px;
+}
+#mainGrid .bomb div p {
+  position: relative;
+  font-size: 50px;
+  right: 4px;
+  bottom: 19px;
+  z-index: 10;
+  color: white;
+}
+
+#mainGrid .bomb2 {
+  background: black;
+}
+#mainGrid .bomb2 div {
+  background: red;
+  position: relative;
+  top: 1px;
+}
+/* #mainGrid .bomb div {
+  border-radius: 50%;
+  background: black;
+  width: 24px;
+  height: 24px;
+  margin: 8px 0 0 8px;
+  position: relative;
+  bottom: 8px;
+} */
+
+.number {
+  position: relative;
+  font-size: 30px;
+  text-align: center;
+  font-weight: 800;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.number .n1 {
+  color: blue;
+}
+.number .n2 {
+  color: green;
+}
+.number .n3 {
+  color: red;
+}
+.number .n4 {
+  color: purple;
+}
+.number .n5 {
+  color: maroon;
+}
+.number .n6 {
+  color: turquoise;
+}
+
+
+
+
+
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
