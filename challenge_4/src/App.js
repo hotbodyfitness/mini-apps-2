@@ -10,6 +10,14 @@ var App = ({ win, lose, logWin, logLose, revealSurrounding, revealed, click, bom
   if (rev && rev.length === 90 && !lose) {
     logWin();
   }
+  if (rev && !rev.length) {
+    for (let i = 1; i < 101; i++) {
+      let node = document.getElementById('g' + i);
+      if (node) {
+        node.innerText = '';
+      }
+    }
+  }
 
   for (let i = 1; i <= 100; i++) {
     if (rev && rev[revIndex] && Number(rev[revIndex]) === i) {
@@ -39,9 +47,21 @@ var App = ({ win, lose, logWin, logLose, revealSurrounding, revealed, click, bom
     })
   }
 
+  if (win) {
+    bombs.forEach(e => {
+      let node = document.getElementById('g' + e);
+      node.innerText = '⚑';
+      node.style.color = 'rgb(254, 173, 0)';
+      node.style.textShadow = '-2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000';
+      node.style.fontWeight = '500';
+    })
+  }
+
   var showOpenMouth = () => {
     var smile = document.getElementById('smile').childNodes[0];
-    smile.innerText = '😮';
+    if (!win) {
+      smile.innerText = '😮';
+    }
   };
   var closeMouth = () => {
     var smile = document.getElementById('smile').childNodes[0];
@@ -53,6 +73,26 @@ var App = ({ win, lose, logWin, logLose, revealSurrounding, revealed, click, bom
       smile.innerText = '🙂';
     }
   };
+
+  var handleRight = (e) => {
+    // e.preventDefault(); // don't need this because it's prevented in the html file
+    if (!win) {
+      var node = document.getElementById(e.target.id);
+      if (node.innerText === '') {
+        node.innerText = '⚑';
+      } else if (node.innerText === '⚑') {
+        node.innerText = '?';
+        node.style.color = 'black';
+        node.style.textShadow = 'none';
+        node.style.fontWeight = '700';
+      } else {
+        node.innerText = '';
+        node.style.color = 'rgb(254, 173, 0)';
+        node.style.textShadow = '-2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000';
+        node.style.fontWeight = '500';
+      }
+    }
+  }
 
   return (
     <div>
@@ -71,8 +111,8 @@ var App = ({ win, lose, logWin, logLose, revealSurrounding, revealed, click, bom
                   <div key={e} id={e} className='bomb bomb2'><div></div></div>) : (
                   e[0] && e[0][0] === 'n' ? <div className='number' key={e[0]} id={e[0]}><span className={'n' + e[1]}>{e[1]}</span></div> : (
                     e[0] === 'o' ?
-                      <button className='button' onMouseDown={showOpenMouth} onMouseUp={closeMouth} onClick={() => revealSurrounding(surroundingValues(Number(e.slice(1)), numbers, revealed, bombs))} key={e} id={e}></button> :
-                      <button onMouseDown={showOpenMouth} onMouseUp={closeMouth} className='button' onClick={click} key={e} id={'g' + e}></button>
+                      <button className='button' onContextMenu={handleRight} onMouseDown={showOpenMouth} onMouseUp={closeMouth} onMouseOut={closeMouth} onClick={() => revealSurrounding(surroundingValues(Number(e.slice(1)), numbers, revealed, bombs))} key={e} id={'g' + e.slice(1)}></button> :
+                      <button className='button' onContextMenu={handleRight} onMouseDown={showOpenMouth} onMouseUp={closeMouth} onMouseOut={closeMouth} onClick={(ev) => { if (document.getElementById(ev.target.id).innerText === '') { click(ev) } }} key={e} id={'g' + e}></button>
                   )
                 )
             )

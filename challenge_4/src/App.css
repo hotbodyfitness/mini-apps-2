@@ -79,15 +79,15 @@ h1 {
   position: relative;
   top: 1px;
 }
-/* #mainGrid .bomb div {
-  border-radius: 50%;
-  background: black;
-  width: 24px;
-  height: 24px;
-  margin: 8px 0 0 8px;
-  position: relative;
-  bottom: 8px;
-} */
+.button {
+  font-size: 30px;
+  color:rgb(254, 173, 0);
+  text-shadow:
+  -2px -2px 0 #000,
+  2px -2px 0 #000,
+  -2px 2px 0 #000,
+  2px 2px 0 #000;
+}
 
 .number {
   position: relative;
