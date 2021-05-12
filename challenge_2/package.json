@@ -17,7 +17,7 @@
   "dependencies": {
     "babel-loader": "^8.0.6",
     "body-parser": "^1.19.0",
-    "chart.js": "^2.9.3",
+    "chart.js": "^2.9.4",
     "coingecko-api": "^1.0.6",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
